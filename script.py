@@ -1,7 +1,6 @@
 
 # a script to do python based access to the github api
-# step 2 - let's get PyGitHub going.
-# we have to pip install PyGithub on the command line.
+# step 3 - let's fix return type handling
 
 print("Demonstration python based github api access");
 
@@ -16,8 +15,14 @@ g = Github("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")
 #Let's get the user object and print some trivial details
 usr = g.get_user()
 print("user:     " + usr.login)
-print("fullname: " + usr.name)
-print("location: " + usr.location)
-print("company:  " + usr.company)
+
+if usr.name is not None:
+    print("fullname: " + usr.name)
+    
+if usr.location is not None:    
+    print("location: " + usr.location)
+    
+if usr.company is not None:    
+    print("company:  " + usr.company)
 
 
