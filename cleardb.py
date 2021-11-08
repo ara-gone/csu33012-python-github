@@ -1,6 +1,6 @@
 
-# a script to do python based access to the mongodb
-# step 6 - Let's do a useful search
+# a a script to clear the db
+# step 7 - Let's do a useful search
 
 print("Demonstration python based mongodb access");
 
@@ -17,6 +17,4 @@ client = pymongo.MongoClient(conn)
 # Create a database
 db = client.classDB
 
-for user in db.githubuser.find({'location': {'$exists': True}}):
-    pprint.pprint(user)
-    print()
+db.githubuser.delete_many({})
