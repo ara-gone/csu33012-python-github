@@ -1,6 +1,6 @@
 
 # a script to do python based access to the github api
-# step 4 - Let's store our data in a mongodb
+# step 5 - Let's store our data in a mongodb
 
 print("Demonstration python based mongodb access");
 
