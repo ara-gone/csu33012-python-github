@@ -1,6 +1,12 @@
-This repository provides a python equivalent to my repositories that demonstrate github access in haskell. 
+This is a simple command-line program to interface with the GitHub API and perform visualizations with repos and commits.
 
-There is an accompanying recorded lecture.
+Requirements: Installed python, pandas and pygithub.
 
-REMEMBER: You need to create your own github developer access token to run this code. You adjust the code GitHub object initialisation accordingly.
-Stephen
+- pip install pandas
+- pip install pygithub
+
+IMPORTANT: Please modify the ACCESS_TOKEN variable in config.py to include a user access token.
+
+How to run:
+
+- ./main.py
