@@ -23,6 +23,8 @@ for r in repos:
 # after listing available repositories, choose one to analyse
 
 repo_name = ''
+pd.set_option("display.max.columns", None)
+
 while repo_name != 'quit':
     # Ask the user for a name.
     repo_name = input("\nEnter the name of a repository, or enter 'quit' -> ")
@@ -50,11 +52,14 @@ while repo_name != 'quit':
                         'commit_sha': c.sha,
                         'commiter_username': c.author.login if c.author is not None else '',
                         'commit_date': c.author.created_at if c.author is not None else '',
+                        'commit_location': c.author.location if c.author is not None else '',
                     }, ignore_index=True)
                     print('added commit on ' + str(c.author.created_at))
 
                 df.to_csv('../repos.csv', sep=',', encoding='utf-8', index=True)
                 df_commits.to_csv('../commits.csv', sep=',', encoding='utf-8', index=True)
+
+                print(df_commits)
 
                 print('DONE! Check for repos.csv and commits.csv')
                 # df.to_csv('repos.csv', mode='a', header=False)
