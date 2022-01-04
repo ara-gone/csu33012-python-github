@@ -2,7 +2,7 @@ This is a simple command-line program to interface with the GitHub API and perfo
 
 Requirements: Installed python, pandas and pygithub.
 
-- pip install pandas
+- pip install pandas matplotlib
 - pip install pygithub
 
 IMPORTANT: Please modify the ACCESS_TOKEN variable in config.py to include a user access token.
